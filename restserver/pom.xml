@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.restserver</groupId>
+  <artifactId>restserver</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Rest Server</name>
+  <description>Creating a Rest Server From Scratch Just Because</description>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>10</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+    <dependencies>
+	  <dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>3.3.0</version>
+	  </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter-engine</artifactId>
+		<version>5.5.2</version>
+		<scope>test</scope>
+    </dependency>
+	</dependencies>
+</project>
