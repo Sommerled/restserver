@@ -15,6 +15,14 @@ public class Server {
 		
 	}
 	
+	/**
+	 * Starts the server listening on the <SocketServer>
+	 * for requests and then hands a new request over 
+	 * to a worker object.
+	 * 
+	 * @throws Exception if either the <SocketServer> is 
+	 * 		   not set or is closed.
+	 */
 	public void startServer() throws Exception {
 		
 		if(ss == null) {

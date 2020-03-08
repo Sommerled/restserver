@@ -1,6 +1,7 @@
 package com.restserver.worker;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.Socket;
 
 public class Worker implements Runnable{
@@ -10,9 +11,16 @@ public class Worker implements Runnable{
 		
 	}
 
+	/**
+	 * Processes an HTTP request
+	 */
 	public void run() {
 		if(this.socket != null) {
 			try {
+				InputStream is = this.socket.getInputStream();
+				SocketReader socketReader = new SocketReader();
+				socketReader.setIs(is);
+				MessageContainer messageContainer = socketReader.parseMessage();
 				
 			}catch(Exception e) {
 				e.printStackTrace();

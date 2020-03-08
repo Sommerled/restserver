@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.util.Properties;
 
+import com.restserver.worker.WorkerFactory;
+
 
 public class ServerMain {
 
@@ -32,9 +34,12 @@ public class ServerMain {
 				throw new Exception("Port property needs to be set.");
 			}
 			
+			WorkerFactory wf = new WorkerFactory();
 			ServerSocket ss = new ServerSocket(Integer.valueOf(port));
 			Server server = new Server();
 			server.setSs(ss);
+			server.setWorkerFactory(wf);
+			server.startServer();
 		}else {
 			throw new FileNotFoundException("File " + fileName + " not found in classpath");
 		}

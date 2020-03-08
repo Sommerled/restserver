@@ -1,16 +1,12 @@
 package restserver;
 
 import java.io.IOException;
-import java.io.PipedInputStream;
-import java.io.PipedOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.restserver.server.Server;
-import com.restserver.worker.Worker;
 import com.restserver.worker.WorkerFactory;
 
 import static org.mockito.Mockito.*;
